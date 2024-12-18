@@ -1,10 +1,9 @@
-import express, { Router, type Request, type Response } from "express";
+import { Router, type Request, type Response } from "express";
 
-const router = express.Router();
+const router = Router();
 
 router.get("/teste", (req: Request, res: Response) => {
-	res.send({ message: true });
-	return;
+	return res.json({ message: "Deu certo" });
 });
 
 export { router };
